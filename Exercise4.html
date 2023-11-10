@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise-4 Plans Cards</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css"
+      integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: aliceblue;
+    }
+    .main_container {
+      display: flex;
+      width: 80vw;
+      justify-content: space-between;
+    }
+    .card {
+      height: 60vh;
+      width: 20vw;
+      border: 1px solid black;
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 3px 2px 21px 6px rgba(0, 0, 0, 0.39);
+    }
+    .card:nth-child(2) {
+      background-color: #2b3348;
+      color: white;
+    }
+    .card_head {
+      padding: 1rem;
+    }
+    .card_head p {
+      padding-top: 2px;
+    }
+    .card_head h2 {
+      padding-top: 5px;
+      font-size: 2rem;
+    }
+    .card ul li {
+      list-style-type: none;
+      padding: 5px;
+    }
+    .card ul li i {
+      padding-right: 5px;
+    }
+
+    .card button {
+      margin-top: 1.6rem;
+      padding: 0.4rem;
+      border-radius: 10px;
+      background-color: #2b3348;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .card .btn2 {
+      background-color: white;
+      color: #2b3348;
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 712px) {
+      body {
+        height: 100%;
+      }
+      .main_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .card {
+        width: inherit;
+        display: block;
+        margin: 10px 0;
+        display: flex;
+        height: 50 vh;
+      }
+    }
+  </style>
+  <body>
+    <div class="main_container">
+      <div class="card">
+        <div class="card_head">
+          <h1>Free Plan</h1>
+          <p>For personal</p>
+          <h2>$0</h2>
+        </div>
+        <ul>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i>1 users</li>
+          <li>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>4 Web mails
+          </li>
+          <li>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>Responsive
+            Website
+          </li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i>Free SSL</li>
+        </ul>
+        <button>Subscribe now</button>
+      </div>
+      <div class="card">
+        <div class="card_head">
+          <h1>Basic Plan</h1>
+          <p>For small business</p>
+          <h2>$29</h2>
+        </div>
+        <ul>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i>4 users</li>
+          <li>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>10 Web mails
+          </li>
+          <li>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>Responsive
+            Website
+          </li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i>Free SSL</li>
+        </ul>
+        <button class="btn2">Subscribe now</button>
+      </div>
+      <div class="card">
+        <div class="card_head">
+          <h1>Pro Plan</h1>
+          <p>For enterprise</p>
+          <h2>$49</h2>
+        </div>
+        <ul>
+          <li>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>Unlimited users
+          </li>
+          <li>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>Unlimited Web
+            mails
+          </li>
+          <li>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>Responsive
+            Website
+          </li>
+          <li>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>Free SSL +
+            <i class="fa fa-send-o" aria-hidden="true"></i>
+          </li>
+        </ul>
+        <button>Subscribe now</button>
+      </div>
+    </div>
+  </body>
+</html>

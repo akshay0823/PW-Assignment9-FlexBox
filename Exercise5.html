@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Exercise-5 IRCTC-Clone</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .main_container {
+      width: 60vw;
+      height: 80vh;
+      border: 1px solid black;
+      display: flex;
+      justify-content: space-between;
+      overflow-y: hidden;
+    }
+    /* left side  css */
+    .left_container {
+      width: 60%;
+      display: flex;
+      padding: 0 40px;
+      flex-direction: column;
+    }
+    .headers_section {
+      display: flex;
+      justify-content: space-between;
+      height: 17%;
+    }
+    .left_side_logo {
+      margin-top: 15px;
+      /* border: 1px solid black; */
+      width: 35%;
+      display: flex;
+      justify-content: center;
+    }
+    .right_side_elements {
+      margin-top: 15px;
+      /* border: 1px solid black; */
+      width: 65%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      /* height: 15%; */
+    }
+    .right_side_elements .btns {
+      display: flex;
+      justify-content: space-between;
+    }
+    .right_side_elements ul {
+      display: flex;
+      justify-content: space-around;
+    }
+    .right_side_elements ul li {
+      list-style-type: none;
+    }
+    .right_side_elements button {
+      padding: 3px 8px;
+      margin: 10px 5px;
+      background-color: #fcfdfd;
+      border-radius: 5px;
+      /* border: 1px solid black; */
+      cursor: pointer;
+      font-weight: 500;
+    }
+    .right_side_elements .login_btn {
+      background-color: #ee4e14;
+      color: whitesmoke;
+      border: 1px solid #ee4e14;
+    }
+    .right_side_elements .login_btn:hover {
+      background-color: white;
+      color: #ee4e14;
+    }
+    .headings {
+      /* border: 1px solid black; */
+      margin: 25px 0;
+      padding-left: 50 px;
+      padding-right: 20px;
+      text-align: left;
+    }
+    .headings h2 {
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+    .headings h3 {
+      padding-top: 10px;
+      font-family: "Times New Roman", Times, serif;
+    }
+    .headings h3 span:nth-child(1) {
+      color: #19d719;
+    }
+    .headings h3 span:nth-child(2) {
+      color: #f46e01;
+    }
+    .headings h3 span:nth-child(3) {
+      color: purple;
+    }
+    .booking_section {
+      width: 100%;
+    }
+    .pnr_btn {
+      width: inherit;
+      display: flex;
+      justify-content: space-between;
+    }
+    .booking_section button {
+      padding: 3px 5px;
+      display: flex;
+      justify-content: center;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: white;
+      font-weight: bold;
+    }
+    .booking_section button:nth-child(1) {
+      background-color: rgb(16, 16, 137);
+      color: white;
+    }
+
+    .booking_section button img {
+      width: 15px;
+    }
+    .booking_section button img:nth-child(1) {
+      background-color: whitesmoke;
+    }
+    .journey_section_container {
+      width: 100%;
+      /* border: 0.3px solid black; */
+      margin: 20px 0;
+    }
+    .booking_card {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border: 1px solid black;
+    }
+    .booking_card2 {
+      display: flex;
+      justify-content: space-around;
+      align-items: start;
+      border: 1px solid black;
+    }
+    .card_element {
+      width: 37%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .booking_card2 .card_element {
+      width: 30%;
+      align-items: start;
+    }
+    .Search_btn {
+      width: 100%;
+    }
+    .Search_btn button {
+      width: 100%;
+      padding: 10px;
+      color: white;
+      background-color: green;
+      border-radius: 7px;
+      border: none;
+      cursor: pointer;
+    }
+    .Search_btn button span {
+      margin-left: 20px;
+    }
+    .Search_btn button span i {
+    }
+    .small_font {
+      font-size: 0.8rem;
+    }
+    .img_logo {
+      width: 60px;
+      background-color: transparent;
+    }
+    .rail_logo_circle {
+      width: 70px;
+    }
+    .left_img {
+      height: 80vh;
+      width: 100%;
+    }
+    /* right_side css  */
+    .right_container {
+      width: 40%;
+    }
+  </style>
+  <body>
+    <div class="main_container">
+      <div class="left_container">
+        <div class="headers_section">
+          <header class="left_side_logo">
+            <img src="/IRCTC-Images/Logo.png" class="img_logo" alt="" />
+            <img
+              src="/IRCTC-Images/South-western-Railway-logo.png"
+              class="rail_logo_circle"
+              alt=""
+            />
+          </header>
+          <header class="right_side_elements">
+            <ul>
+              <li>Ask Disha</li>
+              <li>Contact us</li>
+              <li>Alerts</li>
+            </ul>
+            <div class="btns">
+              <button class="login_btn">Login</button>
+              <button>Register</button>
+              <button>Agent Login</button>
+            </div>
+          </header>
+        </div>
+        <div class="headings">
+          <h2>Indian Railways</h2>
+          <h3>
+            <span class="green_txt">Safety</span>
+            <span class="orange_txt">Security</span>
+            <span class="black_txt">Punctuality</span>
+          </h3>
+        </div>
+        <div class="booking_section">
+          <div class="pnr_btn">
+            <button class="booking_btn">
+              <img src="/img/ticket.png" alt="" />BOOK Ticket
+            </button>
+            <button class="Pnr_btn">
+              <img src="/img/tick.png" alt="" />PNR Status
+            </button>
+            <button class="charts_btn">
+              <img src="/img/chart.png" alt="" />Charts / Vacancy
+            </button>
+          </div>
+          <div class="journey_section_container">
+            <div class="booking_card">
+              <div class="card_img_train">
+                <img src="/img/train.png" alt="" width="15px" />
+              </div>
+              <div class="selection_option">
+                <div class="dropdown">
+                  <span class="small_font">From</span>
+                  <img
+                    src="/img/arrow-down-sign-to-navigate.png"
+                    alt=""
+                    width="10px"
+                  />
+                </div>
+                <div class="choose_location">
+                  <h2>Bengalore</h2>
+                  <span class="small_font">KSR- Bengalore</span>
+                </div>
+              </div>
+              <div class="center_arrow">
+                <img src="/img/transfer.png" alt="" width="30px" />
+              </div>
+              <div class="card_element">
+                <div class="card_element_image_container">
+                  <img src="/img/train.png" alt="" / width="15px">
+                </div>
+                <div class="select_option">
+                  <div class="dropdown">
+                    <span class="small_font">To</span>
+                    <img
+                      src="/img/arrow-down-sign-to-navigate.png"
+                      alt=""
+                      width="10px"
+                    />
+                  </div>
+                  <div class="choose_location">
+                    <h2>Kasaragod</h2>
+                    <span class="small_font">KSD - Kasaragod</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="booking_card2">
+              <div class="card_img_train">
+                <img src="/img/calendar.png" alt="" width="15px" />
+              </div>
+              <div class="selection_option">
+                <div class="dropdown">
+                  <span class="small_font">Date</span>
+                  <img
+                    src="/img/arrow-down-sign-to-navigate.png"
+                    alt=""
+                    width="10px"
+                  />
+                </div>
+                <div class="choose_location">
+                  <h2>01 Aug 23</h2>
+                  <span class="small_font">Tuesday</span>
+                </div>
+              </div>
+              <div class="card_img_train">
+                <img src="/img/clock.png" alt="" width="15px" />
+              </div>
+              <div class="selection_option">
+                <div class="dropdown">
+                  <span class="small_font">Date</span>
+                  <img
+                    src="/img/arrow-down-sign-to-navigate.png"
+                    alt=""
+                    width="10px"
+                  />
+                </div>
+                <div class="choose_location">
+                  <h2>3A</h2>
+                  <span class="small_font">AC 3 Tier</span>
+                </div>
+              </div>
+              <div class="card_element">
+                <div class="card_element_image_container">
+                  <img src="/img/seat.png" alt="" / width="15px">
+                </div>
+                <div class="select_option">
+                  <div class="dropdown">
+                    <span class="small_font">Seat Type</span>
+                    <img
+                      src="/img/arrow-down-sign-to-navigate.png"
+                      alt=""
+                      width="10px"
+                    />
+                  </div>
+                  <div class="choose_location">
+                    <h2>TATKAL</h2>
+                    <span class="small_font">AC 3 Ties</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Search_btn">
+          <button>
+            Search Train
+            <span><i class="fas fa-arrow-right"></i></span>
+          </button>
+        </div>
+      </div>
+      <div class="right_container">
+        <img src="/IRCTC-Images/download.png" class="left_img" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
